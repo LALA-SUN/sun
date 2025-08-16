@@ -1,0 +1,2577 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>消费升级下的民生变迁</title>
+    <link href="Untitled-2.css" rel="stylesheet">
+	 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="body1" >
+    <!-- 导航栏 -->
+    <nav>
+        <div class="container3">
+            <ul class="nav-links">
+                <li><a href="#background1" class="active">背景和现状</a></li>
+                <li><a href="#fenxi1" class="active">品质型零售业核心数据分析</a></li>
+                <li><a href="#qushi1" class="active">可视化设计分析发展趋势</a></li>
+                <li><a href="#summary1" class="active">总结与思考</a></li>
+            </ul>
+        </div>
+    </nav>	
+    <!-- 头部 -->
+	<div class="page-container">
+    <header id="home">
+        <div class="container2">
+			<br />
+            <h1 class="biao">从山姆、胖东来等品质类超市的崛起中
+				<br />解码消费升级下的民生变迁</h1>
+				<br />
+				<br />
+				
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .data-wrapper {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        .sectionb{
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+        .sectionb-title {
+            color: #2d3748;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+        .sectionb-title::before {
+            content: '';
+            width: 4px;
+            height: 24px;
+            border-radius: 2px;
+            margin-right: 0.75rem;
+        }
+        .sam-title::before { background: #3B82F6; }
+        .pang-title::before { background: #10B981; }
+        .consumption-title::before { background: #F59E0B; }
+
+        .contentb-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        @media (max-width: 768px) {
+            .content-grid { grid-template-columns: 1fr; }
+        }
+        .text-contentb {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .data-pointb {
+            margin-bottom: 1.5rem;
+            padding-left: 1rem;
+            border-left: 2px solid #e2e8f0;
+        }
+        .data-pointb strong { color: #2d3748; }
+        .data-pointb.sam strong { color: #3B82F6; }
+        .data-pointb.pang strong { color: #10B981; }
+
+        .chart-containerb {
+            position: relative;
+            height: 300px;
+            width: 100%;
+        }
+        .summaryb {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: #f7fafc;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            color: #4a5568;
+        }
+    </style>
+    <div class="data-wrapper">
+        <!-- 第一部分：山姆数据（单独展示） -->
+        <div class="sectionb">
+            <h2 class="sectionb-title sam-title">山姆会员店的扩张与影响力（2018-2024）</h2>
+            <div class="contentb-grid">
+                <div class="text-contentb">
+                    <div class="data-pointb sam">
+                       <font size="+1"> <p align="left">门店数量从26家增至50+家，<strong>6年翻倍</strong>，覆盖城市从19个扩展至35个，实现对一二线及核心三线城市的深度渗透。</p>
+                    </div>
+                    <div class="data-pointb sam">
+                        <p align="left">会员数突破千万，按年均消费3000元计算，<strong>年会员费收入超20亿元</strong>，商品销售额预估增长超3倍，反映出中高收入家庭的消费粘性。</p>
+                    </div>
+                    <div class="summaryb">
+                        <p align="left"><strong>核心逻辑：</strong>通过“精选商品+会员制”锁定高净值人群，门店扩张速度与会员增长形成正向循环，印证品质消费市场的扩容。</p></font>
+                    </div>
+                </div>
+                <div class="chart-containerb">
+                    <canvas id="samChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- 第二部分：胖东来数据（单独展示） -->
+        <div class="sectionb">
+            <h2 class="sectionb-title pang-title">胖东来的区域爆发力（2018-2024）</h2>
+            <div class="contentb-grid">
+                <div class="chart-containerb">
+                    <canvas id="pangChart"></canvas>
+                </div>
+                <div class="text-contentb">
+                    <div class="data-pointb pang">
+                       <font size="+1"> <p align="left">单店日均客流从约0.4万人次增至1.5万人次，<strong>增长275%</strong>，节假日峰值超2.5万人次，热门商品常上架即售罄，需限流入场。</p>
+                    </div>
+                    <div class="data-pointb pang">
+                        <p align="left">年销售额从50亿元增至超150亿元，<strong>6年增长2倍</strong>，尽管仅布局4个城市，却创造出远超同区域商超的坪效，凸显“极致服务”的溢价能力。</p>
+                    </div>
+                    <div class="summaryb">
+                        <p align="left"><strong>核心逻辑：</strong>以“服务细节+商品品质”建立区域垄断，客流增长直接带动销售额攀升，证明“小而美”模式在品质消费时代的竞争力。</p></font>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 第三部分：消费能力关联数据 -->
+        <div class="sectionb">
+            <h2 class="sectionb-title consumption-title">居民消费能力与品质需求升级</h2>
+            <div class="contentb-grid">
+                <div class="chart-containerb">
+                    <canvas id="consumptionChart"></canvas>
+                </div>
+                <div class="text-contentb">
+                    <div class="data-pointb">
+                       <font size="+1" > <p align="left">居民人均可支配收入从28228元增至41690元，<strong>增长47.7%</strong>，为品质消费提供经济基础，中产阶级规模扩大推动消费结构升级。</p>
+                    </div>
+                    <div class="data-pointb">
+                        <p align="left">品质消费市场年增速超15%，<strong>是整体消费市场的2倍</strong>，其中有机食品、高端服务、体验类消费占比显著提升，与两大品牌的增长趋势高度吻合。</p>
+                    </div>
+                    <div class="summaryb">
+                        <p align="left"><strong>关联结论：</strong>收入增长→消费预算向品质倾斜→山姆、胖东来等品牌精准承接需求，形成“收入-消费-品牌增长”的闭环。</p></font>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 1. 山姆图表（门店+会员双维度，同类型数据对比）
+            const samCtx = document.getElementById('samChart').getContext('2d');
+            new Chart(samCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['2018年', '2024年'],
+                    datasets: [
+                        {
+                            label: '门店数量（家）',
+                            data: [26, 52],
+                            backgroundColor: 'rgba(59, 130, 246, 0.7)',
+                            borderColor: 'rgba(59, 130, 246, 1)',
+                            borderWidth: 1,
+                            borderRadius: 6,
+                            yAxisID: 'y'
+                        },
+                        {
+                            label: '会员数（百万）',
+                            data: [2.5, 10], // 2018年约250万会员（合理估算）
+                            backgroundColor: 'rgba(59, 130, 246, 0.4)',
+                            borderColor: 'rgba(59, 130, 246, 0.8)',
+                            borderWidth: 1,
+                            borderRadius: 6,
+                            yAxisID: 'y1'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'top', labels: { usePointStyle: true, padding: 20 } }
+                    },
+                    scales: {
+                        y: { type: 'linear', position: 'left', title: { display: true, text: '门店数量（家）' } },
+                        y1: { type: 'linear', position: 'right', title: { display: true, text: '会员数（百万）' }, grid: { drawOnChartArea: false } },
+                        x: { grid: { display: false } }
+                    }
+                }
+            });
+
+            // 2. 胖东来图表（客流+销售额，同类型数据对比）
+            const pangCtx = document.getElementById('pangChart').getContext('2d');
+            new Chart(pangCtx, {
+                type: 'line',
+                data: {
+                    labels: ['2018', '2019', '2020', '2021', '2022', '2023', '2024'],
+                    datasets: [
+                        {
+                            label: '单店日均客流（万人次）',
+                            data: [0.4, 0.6, 0.7, 0.9, 1.1, 1.3, 1.5],
+                            borderColor: 'rgba(16, 185, 129, 1)',
+                            backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                            fill: true,
+                            tension: 0.4,
+                            yAxisID: 'y'
+                        },
+                        {
+                            label: '年销售额（亿元）',
+                            data: [50, 65, 78, 95, 110, 130, 150],
+                            borderColor: 'rgba(16, 185, 129, 0.7)',
+                            borderDash: [5, 5],
+                            tension: 0.4,
+                            yAxisID: 'y1'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'top', labels: { usePointStyle: true, padding: 20 } }
+                    },
+                    scales: {
+                        y: { title: { display: true, text: '日均客流（万人次）' } },
+                        y1: { position: 'right', title: { display: true, text: '年销售额（亿元）' }, grid: { drawOnChartArea: false } },
+                        x: { grid: { display: false } }
+                    }
+                }
+            });
+
+            // 3. 消费能力图表（保持不变，强化关联）
+            const consumptionCtx = document.getElementById('consumptionChart').getContext('2d');
+            new Chart(consumptionCtx, {
+                type: 'line',
+                data: {
+                    labels: ['2018', '2019', '2020', '2021', '2022', '2023', '2024'],
+                    datasets: [
+                        {
+                            label: '人均可支配收入（元）',
+                            data: [28228, 30733, 32189, 35128, 36883, 39281, 41690],
+                            borderColor: 'rgba(245, 158, 11, 1)',
+                            backgroundColor: 'rgba(245, 158, 11, 0.1)',
+                            fill: true,
+                            tension: 0.3,
+                            yAxisID: 'y'
+                        },
+                        {
+                            label: '品质消费年增速（%）',
+                            data: [12, 13, 14, 16, 15, 17, 16],
+                            borderColor: 'rgba(245, 158, 11, 0.7)',
+                            borderDash: [5, 5],
+                            tension: 0.3,
+                            yAxisID: 'y1'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'top', labels: { usePointStyle: true, padding: 20 } }
+                    },
+                    scales: {
+                        y: { title: { display: true, text: '人均可支配收入（元）' } },
+                        y1: { position: 'right', title: { display: true, text: '品质消费增速（%）' }, grid: { drawOnChartArea: false } },
+                        x: { grid: { display: false } }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+			<br />
+			
+<p class="biaocu">这些超市的爆发式增长，仅仅是商业现象，还是民生需求变化的"晴雨表"？<br />数据背后，藏着怎样的消费新趋势与生活新图景？</p>
+		<br />
+		<br />
+        </div>
+		<br />
+		<div class="changtu"><img class="t1" src="pic/t1.jpeg" alt="1">
+			<img class="t1" src="pic/t4.jpg" alt="2">
+			<img class="t1" src="pic/t3.jpg" alt="3">
+			<img class="t1" src="pic/t2.jpg" alt="4"></div>
+		<br />
+		<br />
+    </header>
+    <div class="container1" id="background1">
+        <!-- 背景和现状 -->
+        <section id="background" class="data-overview">
+			<header class="text-center mb-12">
+            <h1 class="text-[clamp(1.8rem,5vw,3rem)] font-bold text-dark mb-4 relative inline-block">
+               背景和现状
+                <span class="absolute -bottom-2 left-0 w-full h-1 bg-primary rounded-full transform scale-x-50 transition-transform duration-300 origin-bottom-center hover:scale-x-100"></span>
+            </h1>
+            <p class="text-neutral text-lg max-w-3xl mx-auto">
+                以中国社会经济大环境为切入点，阐述传统零售业与品质类零售业的发展态势及现状，进而剖析传统卖场与胖东来在经营表现上形成反差的问题现象
+            </p>
+        </header>
+				<div class="container mx-auto px-4 py-12 max-w-8xl">
+<div class="data-card">
+  <h3 id="现状">中国零售业的发展趋势和现状</h3>
+	
+                <p class="value">2021-2025 年，传统零售业呈现 “整体平稳、业态分化” 态势。社会零售业增速从 2021 年的 12.5% 放缓至 2024 年的 3.5%，2025 年上半年商品零售同比增长 5.1%；其中超市业态表现稳健，2025 年上半年增速达 5.4%，而百货行业承压明显，45% 的企业预期 2025 年销售额下滑。
+				<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;同期，品质零售增速持续领先。2021 年高端百货销售额增长 28%-35%，2024 年仓储会员店保持两位数增长势头，2025 年上半年专业店增速达 6.4%，即时零售市场规模预计年内突破万亿。</p>
+				<div class="extra-content">
+                    <div class="image-container">
+                        <img src="pic/bei3.png" alt="经济数据图表" class="bei3">
+                        <img src="pic/bei4.png" alt="消费趋势图表" class="bei4">
+                    </div>
+                    <p class="extra-content" id="guotong">数据来源：国家统计局</p>
+                    <p class="extra-content">&nbsp;</p>
+				</div>
+            </div>
+         
+
+            <div class="data-card">
+                <h3 id="现状">胖东来营业额</h3>
+                <p class="value">胖东来营业额从2023年的107亿元增长至2024年的169.64亿元 ，展现出其强大的市场竞争力和良好的发展态势，在传统商超行业面临困境时，胖东来凭借自身特色经营赢得了消费者青睐，业绩稳步提升 。<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在各业态中，超市销售额最高，许昌的超市 2024 年累计销售约 59.45 亿元，新乡的超市累计销售约 21.49 亿元 。</p>
+			
+                <p class="extra-content" id="guotong2">数据来源：企业公开数据</p>
+           <div class="extra-content">
+                    <div class="image-container">
+                        <img src="pic/bei5.png" alt="经济数据图表" class="bei5">
+                        <img src="pic/bei6.png" alt="消费趋势图表" class="bei6">
+                    </div>
+				</div>
+            </div>
+				</div>
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+		
+     <div class="qustionall"><h2 id="question1"> 为何在传统卖场整体减亏，仍面临诸多经营压力的情况下，</h2>
+		<h1 id="question2">胖东来能实现营业额大幅增长？</h1></div>
+			<br />
+			<br />
+			<div class="arrow1"></div>
+			<div class="arrow2"></div>
+			<div class="arrow3"></div>
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<div id="fenxi1">
+			<br />
+			<!-- part2 -->
+    <title >2025年中国品质消费趋势分析</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
+    </div>
+    <!-- 引入外部CSS文件 -->
+    <link rel="stylesheet" href="consumption-trends.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                        secondary: '#10b981',
+                        accent: '#8b5cf6',
+                        neutral: '#64748b',
+                        light: '#f8fafc',
+                        dark: '#1e293b'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+<body class="gradient-bg text-dark">
+        <header class="text-center mb-12">
+            <h1 class="text-[clamp(1.8rem,5vw,3rem)] font-bold text-dark mb-4 relative inline-block">
+                品质型零售业核心数据分析
+                <span class="absolute -bottom-2 left-0 w-full h-1 bg-primary rounded-full transform scale-x-50 transition-transform duration-300 origin-bottom-center hover:scale-x-100"></span>
+            </h1>
+            <p class="text-neutral text-lg max-w-3xl mx-auto">
+                深入解析品质消费市场的发展趋势、人群特征、渠道变革与区域分布，揭示中国消费的新方向
+            </p>
+        </header>
+        
+        <!-- 维度选择器 -->
+	<div class="container mx-auto px-4 py-12 max-w-8xl">
+        <div class="flex flex-wrap justify-center gap-3 mb-10">
+            <button class="dimension-tab tab-active px-6 py-3 rounded-full border-2 font-medium transition-all duration-300" data-panel="panel1">
+                <i class="fa fa-line-chart mr-2"></i>消费品质升级
+            </button>
+            <button class="dimension-tab px-6 py-3 rounded-full border-2 border-gray-200 bg-white font-medium transition-all duration-300 hover:border-primary/50" data-panel="panel2">
+                <i class="fa fa-users mr-2"></i>人群覆盖
+            </button>
+            <button class="dimension-tab px-6 py-3 rounded-full border-2 border-gray-200 bg-white font-medium transition-all duration-300 hover:border-primary/50" data-panel="panel3">
+                <i class="fa fa-shopping-bag mr-2"></i>消费场景变迁
+            </button>
+            <button class="dimension-tab px-6 py-3 rounded-full border-2 border-gray-200 bg-white font-medium transition-all duration-300 hover:border-primary/50" data-panel="panel4">
+                <i class="fa fa-map-marker mr-2"></i>区域数据
+            </button>
+        </div>
+        
+        <!-- 维度内容 -->
+        <div class="dimension-panels">
+            <!-- 维度1：消费品质升级 -->
+            <div class="dimension-panel animate-fade-in block" id="panel1">
+                <div class="bg-white rounded-2xl shadow-md p-6 mb-8">
+                    <h2 class="text-2xl font-bold mb-4 text-dark">消费品质升级：从"买得到"到"买得好"的转变</h2>
+                    <p class="text-neutral leading-relaxed">
+                        <font size="+1">本维度通过销售额增长、消费人数趋势、会员规模及消费时段分布，展现2018-2025年品质零售业的核心增长动力。数据显示，消费者对高品质商品的支付意愿持续提升，推动行业从量的扩张转向质的提升。</font>
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
+                    <!-- 销售额与消费人数增长 -->
+                    <div class="bg-white rounded-2xl shadow-md overflow-hidden card-hover">
+                        <div class="p-6 border-b border-gray-100">
+                            <h3 class="text-xl font-semibold text-dark">2018-2025年品质零售业增长趋势</h3>
+                            <p class="text-neutral text-sm mt-1"><font size="+1">销售额（亿元）与消费人数（百万人）对比</font></p>
+                        </div>
+                        <div class="p-6">
+                            <div class="h-[350px]">
+                                <canvas id="salesChart"></canvas>
+                            </div>
+                            <div class="mt-6 bg-blue-50 p-4 rounded-lg border border-blue-100">
+                                <p class="text-sm text-neutral leading-relaxed">
+                                    <span class="font-semibold text-primary"><font size="+1">显著发现：</span>品质零售业销售额从2018年的320亿元增长至2025年的980亿元，年均复合增长率为17.2%。消费人数从1500万人<strong><font color="#3B82F6">增至5200万</font></strong>人，<strong><font color="#3B82F6">增长247%</font></strong>，表明品质消费已从少数人的选择转变为大众需求。</font>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 会员规模增长 -->
+                    <div class="bg-white rounded-2xl shadow-md overflow-hidden card-hover">
+                        <div class="p-6 border-b border-gray-100">
+                            <h3 class="text-xl font-semibold text-dark">2018-2025年品质超市会员增长</h3>
+                            <p class="text-neutral text-sm mt-1"><font size="+1">会员人数（万人）及会员消费占比（%）</font></p>
+                        </div>
+                        <div class="p-6">
+                            <div class="h-[350px]">
+                                <canvas id="membershipChart"></canvas>
+                            </div>
+                            <div class="mt-6 bg-green-50 p-4 rounded-lg border border-green-100">
+                                <p class="text-sm text-neutral leading-relaxed">
+                                    <span class="font-semibold text-secondary"><font size="+1">会员价值：</span>会员人数从2018年的180万增至2025年的<strong><font color="#10B981">980万</font></strong>，会员消费占比达<strong><font color="#10B981">68%</font></strong>，成为核心收入来源。会员复购率比非会员<strong><font color="#10B981">高3倍</font></strong>，为企业提供了稳定的现金流。</font>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 每周消费占比 -->
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden card-hover">
+                    <div class="p-6 border-b border-gray-100">
+                        <h3 class="text-xl font-semibold text-dark">2025年品质消费每周时段分布</h3>
+                        <p class="text-neutral text-sm mt-1"><font size="+1">各时段消费占比及客单价指数（以工作日白天为100）</font></p>
+                    </div>
+                    <div class="p-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                            <div class="h-[300px]">
+                                <canvas id="timeDistributionChart"></canvas>
+                            </div>
+                            <div>
+                                <div class="space-y-4">
+                                    <div class="flex items-center">
+                                        <div class="w-4 h-4 rounded-full bg-primary mr-3"></div>
+                                        <div>
+                                          <font size="+1"><div class="font-medium">工作日晚间 (35%)</div>
+                                            <div class="text-sm text-neutral"><font size="+1">18:00-22:00，下班后的消费高峰</font></div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <div class="w-4 h-4 rounded-full bg-secondary mr-3"></div>
+                                        <div>
+                                            <div class="font-medium">周末白天 (25%)</div>
+                                            <div class="text-sm text-neutral"><font size="+1">周六日9:00-17:00，休闲购物主要时段</font></div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <div class="w-4 h-4 rounded-full bg-accent mr-3"></div>
+                                        <div>
+                                            <div class="font-medium">周末晚间 (18%)</div>
+                                            <div class="text-sm text-neutral"><font size="+1">周六日18:00-22:00，社交消费集中时段</font></div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <div class="w-4 h-4 rounded-full bg-amber-500 mr-3"></div>
+                                        <div>
+                                            <div class="font-medium">工作日午休 (12%)</div>
+                                            <div class="text-sm text-neutral"><font size="+1">12:00-14:00，便捷型品质消费</font></div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <div class="w-4 h-4 rounded-full bg-red-500 mr-3"></div>
+                                        <div>
+                                            <div class="font-medium">节假日 (7%)</div>
+                                            <div class="text-sm text-neutral"><font size="+1">法定假日，旅游文化消费为主</font></div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <div class="w-4 h-4 rounded-full bg-neutral mr-3"></div>
+                                        <div>
+                                            <div class="font-medium">工作日早晨 (3%)</div>
+                                            <div class="text-sm text-neutral"><font size="+1">7:00-9:00，早餐和快捷消费</font></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-6 bg-purple-50 p-4 rounded-lg border border-purple-100">
+                                    <p class="text-sm text-neutral leading-relaxed">
+                                        <span class="font-semibold text-accent"><font size="+1">运营启示：</span>周末消费占比达<strong><font color="#3B82F6">45%</font></strong>，客单价比工作日<strong><font color="#3B82F6">高22%</font></strong>。零售企业需针对性调整策略：周末增加体验活动，工作日强化线上配送，提升整体运营效率。</font>
+                                    </p></font>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 维度2：人群覆盖 -->
+            <div class="dimension-panel hidden" id="panel2">
+                <div class="bg-white rounded-2xl shadow-md p-6 mb-8">
+                    <h2 class="text-2xl font-bold mb-4 text-dark">人群覆盖：品质消费的客群结构与演变</h2>
+                    <p class="text-neutral leading-relaxed">
+                        <font size="+1">本维度分析品质消费的客群年龄分布和社会阶层构成变化，揭示品质消费从特定人群向更广泛群体渗透的趋势。数据显示，品质消费已突破传统高端客群限制，呈现年轻化、大众化特征。</font>
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
+                    <!-- 客群年龄分布 -->
+                    <div class="bg-white rounded-2xl shadow-md overflow-hidden card-hover">
+                        <div class="p-6 border-b border-gray-100">
+                            <h3 class="text-xl font-semibold text-dark">2025年品质消费客群年龄分布</h3>
+                            <p class="text-neutral text-sm mt-1"><font size="+1">各年龄段消费占比及年均消费额（万元）</font></p>
+                        </div>
+                        <div class="p-6">
+                            <div class="h-[350px]">
+                                <canvas id="ageDistributionChart"></canvas>
+                            </div>
+                            <div class="mt-6 bg-blue-50 p-4 rounded-lg border border-blue-100">
+                                <p class="text-sm text-neutral leading-relaxed">
+                                    <span class="font-semibold text-primary"><font size="+1">年龄特征：</span>25-45岁人群占品质消费总人群的<strong><font color="#3B82F6">60%</font></strong>，构成消费主力。与2018年相比，18-24岁年轻群体占比从5%<strong><font color="#3B82F6">提升至12%</font></strong>，56岁以上群体从3%<strong><font color="#3B82F6">提升至6%</font></strong>，表明品质消费呈现"<strong><font color="#3B82F6">两端扩展</font></strong>"趋势。</font>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 客群阶层分布 -->
+                    <div class="bg-white rounded-2xl shadow-md overflow-hidden card-hover">
+                        <div class="p-6 border-b border-gray-100">
+                            <h3 class="text-xl font-semibold text-dark">2018-2025年品质消费客群阶层变化</h3>
+                            <p class="text-neutral text-sm mt-1"><font size="+1">不同收入群体占比变化趋势（%）</font></p>
+                        </div>
+                        <div class="p-6">
+                            <div class="h-[350px]">
+                                <canvas id="classDistributionChart"></canvas>
+                            </div>
+                            <div class="mt-6 bg-green-50 p-4 rounded-lg border border-green-100">
+                                <p class="text-sm text-neutral leading-relaxed">
+                                    <span class="font-semibold text-secondary"><font size="+1">结构变化：</span>高收入群体占比从2018年的70%下降至2025年的<strong><font color="#10B981">20%</font></strong>，而中等收入群体占比从30%<strong><font color="#10B981">上升至58%</font></strong>，成为品质消费的主力军，标志着品质消费从"高端专属"向<strong><font color="#10B981">"大众普惠"</font></strong>转型。</font>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 不同人群消费偏好 -->
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden card-hover">
+                    <div class="p-6 border-b border-gray-100">
+                        <h3 class="text-xl font-semibold text-dark">不同年龄段品质消费偏好</h3>
+                        <p class="text-neutral text-sm mt-1"><font size="+1">各品类消费占比（%）</font></p>
+                    </div>
+                    <div class="p-6">
+                        <div class="h-[350px]">
+                            <canvas id="preferenceChart"></canvas>
+                        </div>
+                        <div class="mt-6 bg-purple-50 p-4 rounded-lg border border-purple-100">
+                            <p class="text-sm text-neutral leading-relaxed">
+                                <span class="font-semibold text-accent"><font size="+1">消费差异：</span>36-45岁群体在健康食品（82%）和教育培训（70%）上的投入占比最高；25-35岁群体则更倾向于智能家居（65%）、美妆个护（70%）和休闲娱乐（60%），体现了不同年龄段的消费特征。</font>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 维度3：消费场景和渠道变迁 -->
+            <div class="dimension-panel hidden" id="panel3">
+                <div class="bg-white rounded-2xl shadow-md p-6 mb-8">
+                    <h2 class="text-2xl font-bold mb-4 text-dark">消费场景和渠道变迁：线上线下融合与服务升级</h2>
+                    <p class="text-neutral leading-relaxed">
+                        <font size="+1">本维度分析品质消费在渠道选择、场景体验和服务需求上的变化趋势。数据显示，即时零售、线上线下融合以及个性化服务已成为品质消费的重要特征，推动零售业从"商品销售"向"生活服务"转型。</font>
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-10">
+                    <!-- 即时零售发展趋势 -->
+                    <div class="bg-white rounded-2xl shadow-md overflow-hidden card-hover">
+                        <div class="p-6 border-b border-gray-100">
+                            <h3 class="text-xl font-semibold text-dark">即时零售市场规模</h3>
+                            <p class="text-neutral text-sm mt-1"><font size="+1">2018-2025年1小时达服务增长（亿元）</font></p>
+                        </div>
+                        <div class="p-6">
+                            <div class="h-[250px]">
+                                <canvas id="instantRetailChart"></canvas>
+                            </div>
+                            <div class="mt-4 bg-blue-50 p-4 rounded-lg border border-blue-100">
+                                <p class="text-sm text-neutral leading-relaxed">
+                                    <span class="font-semibold text-primary"><font size="+1">爆发增长：</span>市场规模从2018年的20亿元增至2025年的<strong><font color="#3B82F6">680亿</font></strong>元，年均增长率高达<strong><font color="#3B82F6">75.3%</font></strong>，配送时效从平均1小时提升至<strong><font color="#3B82F6">30分钟</font></strong>。</font>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 线上线下消费占比变化 -->
+                    <div class="bg-white rounded-2xl shadow-md overflow-hidden card-hover">
+                        <div class="p-6 border-b border-gray-100">
+                            <h3 class="text-xl font-semibold text-dark">渠道占比变化</h3>
+                            <p class="text-neutral text-sm mt-1"><font size="+1">2018-2025年线上线下消费占比（%）</font></p>
+                        </div>
+                        <div class="p-6">
+                            <div class="h-[250px]">
+                                <canvas id="onlineOfflineChart"></canvas>
+                            </div>
+                            <div class="mt-4 bg-green-50 p-4 rounded-lg border border-green-100">
+                                <p class="text-sm text-neutral leading-relaxed">
+                                    <span class="font-semibold text-secondary"><font size="+1">融合趋势：</span>线上消费占比从20%<strong><font color="#10B981">上升至60%</font></strong>，但纯线上或纯线下场景减少，融合消费占比已达<strong><font color="#10B981">35%</font></strong>。</font>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 老年人专属服务增长 -->
+                    <div class="bg-white rounded-2xl shadow-md overflow-hidden card-hover">
+                        <div class="p-6 border-b border-gray-100">
+                            <h3 class="text-xl font-semibold text-dark">老年人服务使用量</h3>
+                            <p class="text-neutral text-sm mt-1"><font size="+1">2018-2025年免费送货服务（万单）</font></p>
+                        </div>
+                        <div class="p-6">
+                            <div class="h-[250px]">
+                                <canvas id="elderlyServiceChart"></canvas>
+                            </div>
+                            <div class="mt-4 bg-red-50 p-4 rounded-lg border border-red-100">
+                                <p class="text-sm text-neutral leading-relaxed">
+                                    <span class="font-semibold text-red-500"><font size="+1">银发市场：</span>服务使用量从30万单增至<strong><font color="#E27A7B">500万</font></strong>单，增长超过15倍，满意度达<strong><font color="#E27A7B">92%</font></strong>，使用过该服务的老年客户复购率高<strong><font color="#E27A7B">40%</font></strong>。</font>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 维度4：区域数据 -->
+            <div class="dimension-panel hidden" id="panel4">
+                <div class="bg-white rounded-2xl shadow-md p-6 mb-8">
+                    <h2 class="text-2xl font-bold mb-4 text-dark">区域数据：品质消费的地域分布与均衡发展</h2>
+                    <p class="text-neutral leading-relaxed">
+                        <font size="+1">本维度分析不同线级城市的品质消费差异、零售网络分布及民生服务均衡性。数据显示，品质消费正从一二线城市向三四线城市渗透，零售网络布局日趋均衡。</font>
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
+                    <!-- 不同线级城市消费占比 -->
+                    <div class="bg-white rounded-2xl shadow-md overflow-hidden card-hover">
+                        <div class="p-6 border-b border-gray-100">
+                            <h3 class="text-xl font-semibold text-dark">2025年城市线级消费占比</h3>
+                            <p class="text-neutral text-sm mt-1"><font size="+1">各线级城市消费贡献及增速（%）</font></p>
+                        </div>
+                        <div class="p-6">
+                            <div class="h-[350px]">
+                                <canvas id="cityLevelChart"></canvas>
+                            </div>
+                            <div class="mt-6 bg-blue-50 p-4 rounded-lg border border-blue-100">
+                                <p class="text-sm text-neutral leading-relaxed">
+                                    <span class="font-semibold text-primary"><font size="+1">区域特征：</span>二线城市以35%的占比成为品质消费的主力市场，超越一线城市（30%）。与2018年相比，一线城市占比下降15个百分点，而三四线及以下城市占比上升<strong><font color="#3B82F6">20个百分点</font></strong>。</font>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 超市分布密度 -->
+                    <div class="bg-white rounded-2xl shadow-md overflow-hidden card-hover">
+                        <div class="p-6 border-b border-gray-100">
+                            <h3 class="text-xl font-semibold text-dark">品质超市分布密度</h3>
+                            <p class="text-neutral text-sm mt-1"><font size="+1">2018-2025年不同线级城市（店/百万人口）</font></p>
+                        </div>
+                        <div class="p-6">
+                            <div class="h-[350px]">
+                                <canvas id="storeDensityChart"></canvas>
+                            </div>
+                            <div class="mt-6 bg-green-50 p-4 rounded-lg border border-green-100">
+                                <p class="text-sm text-neutral leading-relaxed">
+                                    <span class="font-semibold text-secondary"><font size="+1">网络均衡：</span>三四线城市门店密度从5.2店/百万人口<strong><font color="#10B981">增至24店/百万人口</font></strong>，与一线城市的差距从3.5倍<strong><font color="#10B981">缩小至1倍</font></strong>，体现渠道下沉成效。</font>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 区域消费价格差异 -->
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden card-hover">
+                    <div class="p-6 border-b border-gray-100">
+                        <h3 class="text-xl font-semibold text-dark">区域价格差异</h3>
+                        <p class="text-neutral text-sm mt-1"><font size="+1">2025年不同线级城市同类商品价格差异（以一线城市为基准，%）</font></p>
+                    </div>
+                    <div class="p-6">
+                        <div class="h-[350px]">
+                            <canvas id="priceDifferenceChart"></canvas>
+                        </div>
+                        <div class="mt-6 bg-purple-50 p-4 rounded-lg border border-purple-100">
+                            <p class="text-sm text-neutral leading-relaxed" id="qushi">
+                                <span class="font-semibold text-accent"><font size="+1">价格特征：</span>进口商品的区域价差最大，四线城市比一线城市<strong><font color="#3B82F6">高出17%</font></strong>。与2018年相比，各类商品的区域价差已<strong><font color="#3B82F6">缩小8-12个百分点</font></strong>，反映出物流体系完善带来的民生普惠效应。</font>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="shuju">
+            <p>数据来源：2025年中国品质消费趋势报告 | 分析周期：2018-2025年</p>
+        </div>
+    </div>
+    <script>
+        // 标签切换功能
+        document.querySelectorAll('.dimension-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                // 移除所有标签的active类
+                document.querySelectorAll('.dimension-tab').forEach(t => {
+                    t.classList.remove('tab-active');
+                    t.classList.add('border-gray-200', 'bg-white');
+                });
+                
+                // 给当前点击的标签添加active类
+                tab.classList.add('tab-active');
+                tab.classList.remove('border-gray-200', 'bg-white');
+                
+                // 获取目标面板ID
+                const targetPanel = tab.getAttribute('data-panel');
+                
+                // 隐藏所有面板
+                document.querySelectorAll('.dimension-panel').forEach(panel => {
+                    panel.classList.add('hidden');
+                    panel.classList.remove('animate-fade-in');
+                });
+                
+                // 显示目标面板并添加动画
+                const activePanel = document.getElementById(targetPanel);
+                activePanel.classList.remove('hidden');
+                setTimeout(() => {
+                    activePanel.classList.add('animate-fade-in');
+                }, 50);
+                
+                // 初始化对应面板的图表
+                initChartsForPanel(targetPanel);
+            });
+        });
+
+        // 图表初始化函数
+        function initChartsForPanel(panelId) {
+            // 销毁所有已存在的图表
+            Object.values(window.charts || {}).forEach(chart => chart.destroy());
+            window.charts = {};
+            
+            // 根据面板ID初始化对应的图表
+            if (panelId === 'panel1') {
+                initSalesChart();
+                initMembershipChart();
+                initTimeDistributionChart();
+            } else if (panelId === 'panel2') {
+                initAgeDistributionChart();
+                initClassDistributionChart();
+                initPreferenceChart();
+            } else if (panelId === 'panel3') {
+                initInstantRetailChart();
+                initOnlineOfflineChart();
+                initElderlyServiceChart();
+            } else if (panelId === 'panel4') {
+                initCityLevelChart();
+                initStoreDensityChart();
+                initPriceDifferenceChart();
+            }
+        }
+
+        // 面板1图表
+        function initSalesChart() {
+            const ctx = document.getElementById('salesChart').getContext('2d');
+            window.charts.salesChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025'],
+                    datasets: [
+                        {
+                            label: '销售额（亿元）',
+                            data: [320, 380, 450, 530, 620, 730, 850, 980],
+                            borderColor: '#3b82f6',
+                            backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                            tension: 0.4,
+                            fill: true,
+                            yAxisID: 'y'
+                        },
+                        {
+                            label: '消费人数（百万人）',
+                            data: [15, 19, 24, 29, 35, 41, 47, 52],
+                            borderColor: '#10b981',
+                            backgroundColor: 'transparent',
+                            tension: 0.4,
+                            borderDash: [5, 5],
+                            yAxisID: 'y1'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    interaction: {
+                        mode: 'index',
+                        intersect: false,
+                    },
+                    scales: {
+                        y: {
+                            type: 'linear',
+                            display: true,
+                            position: 'left',
+                            title: {
+                                display: true,
+                                text: '销售额（亿元）'
+                            }
+                        },
+                        y1: {
+                            type: 'linear',
+                            display: true,
+                            position: 'right',
+                            title: {
+                                display: true,
+                                text: '消费人数（百万人）'
+                            },
+                            grid: {
+                                drawOnChartArea: false
+                            }
+                        }
+                    },
+                    plugins: {
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed.y !== null) {
+                                        label += context.parsed.y;
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function initMembershipChart() {
+            const ctx = document.getElementById('membershipChart').getContext('2d');
+            window.charts.membershipChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['2018', '2020', '2022', '2024', '2025'],
+                    datasets: [
+                        {
+                            label: '会员人数（万人）',
+                            data: [180, 350, 580, 820, 980],
+                            backgroundColor: 'rgba(59, 130, 246, 0.7)',
+                            yAxisID: 'y'
+                        },
+                        {
+                            label: '会员消费占比（%）',
+                            data: [35, 42, 51, 60, 68],
+                            backgroundColor: 'rgba(16, 185, 129, 0.7)',
+                            type: 'line',
+                            yAxisID: 'y1'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            type: 'linear',
+                            position: 'left',
+                            title: {
+                                display: true,
+                                text: '会员人数（万人）'
+                            }
+                        },
+                        y1: {
+                            type: 'linear',
+                            position: 'right',
+                            min: 0,
+                            max: 100,
+                            title: {
+                                display: true,
+                                text: '会员消费占比（%）'
+                            },
+                            grid: {
+                                drawOnChartArea: false
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function initTimeDistributionChart() {
+            const ctx = document.getElementById('timeDistributionChart').getContext('2d');
+            window.charts.timeDistributionChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['工作日晚间', '周末白天', '周末晚间', '工作日午休', '节假日', '工作日早晨'],
+                    datasets: [
+                        {
+                            data: [35, 25, 18, 12, 7, 3],
+                            backgroundColor: [
+                                '#3b82f6', '#10b981', '#8b5cf6', '#f59e0b', '#ef4444', '#64748b'
+                            ],
+                            borderWidth: 0
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const label = context.label || '';
+                                    const value = context.raw || 0;
+                                    return `${label}: ${value}%`;
+                                }
+                            }
+                        }
+                    },
+                    cutout: '60%'
+                }
+            });
+        }
+
+        // 面板2图表
+        function initAgeDistributionChart() {
+            const ctx = document.getElementById('ageDistributionChart').getContext('2d');
+            window.charts.ageDistributionChart = new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: ['25-35岁', '36-45岁', '46-55岁', '18-24岁', '56岁以上'],
+                    datasets: [
+                        {
+                            data: [32, 28, 22, 12, 6],
+                            backgroundColor: [
+                                '#3b82f6', '#10b981', '#8b5cf6', '#f59e0b', '#ef4444'
+                            ],
+                            borderWidth: 0
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const label = context.label || '';
+                                    const value = context.raw || 0;
+                                    return `${label}: ${value}%`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function initClassDistributionChart() {
+            const ctx = document.getElementById('classDistributionChart').getContext('2d');
+            window.charts.classDistributionChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['2018', '2020', '2022', '2024', '2025'],
+                    datasets: [
+                        {
+                            label: '高收入群体',
+                            data: [70, 62, 50, 35, 20],
+                            borderColor: '#3b82f6',
+                            backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                            tension: 0.4,
+                            fill: true
+                        },
+                        {
+                            label: '中等收入群体',
+                            data: [30, 38, 50, 65, 58],
+                            borderColor: '#10b981',
+                            backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                            tension: 0.4,
+                            fill: true
+                        },
+                        {
+                            label: '新兴中等收入群体',
+                            data: [0, 0, 0, 0, 22],
+                            borderColor: '#8b5cf6',
+                            backgroundColor: 'rgba(139, 92, 246, 0.1)',
+                            tension: 0.4,
+                            fill: true
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            stacked: true,
+                            min: 0,
+                            max: 100,
+                            title: {
+                                display: true,
+                                text: '占比（%）'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function initPreferenceChart() {
+            const ctx = document.getElementById('preferenceChart').getContext('2d');
+            window.charts.preferenceChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['健康食品', '智能家居', '美妆个护', '休闲娱乐', '教育培训'],
+                    datasets: [
+                        {
+                            label: '25-35岁',
+                            data: [75, 65, 70, 60, 30],
+                            backgroundColor: 'rgba(59, 130, 246, 0.7)'
+                        },
+                        {
+                            label: '36-45岁',
+                            data: [82, 45, 55, 40, 70],
+                            backgroundColor: 'rgba(16, 185, 129, 0.7)'
+                        },
+                        {
+                            label: '46岁以上',
+                            data: [68, 25, 30, 20, 25],
+                            backgroundColor: 'rgba(139, 92, 246, 0.7)'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            min: 0,
+                            max: 100,
+                            title: {
+                                display: true,
+                                text: '消费占比（%）'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // 面板3图表
+        function initInstantRetailChart() {
+            const ctx = document.getElementById('instantRetailChart').getContext('2d');
+            window.charts.instantRetailChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025'],
+                    datasets: [
+                        {
+                            label: '市场规模（亿元）',
+                            data: [20, 45, 90, 150, 230, 350, 500, 680],
+                            borderColor: '#3b82f6',
+                            backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                            tension: 0.4,
+                            fill: true
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            title: {
+                                display: true,
+                                text: '市场规模（亿元）'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function initOnlineOfflineChart() {
+            const ctx = document.getElementById('onlineOfflineChart').getContext('2d');
+            window.charts.onlineOfflineChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['2018', '2020', '2022', '2024', '2025'],
+                    datasets: [
+                        {
+                            label: '线上消费',
+                            data: [20, 35, 45, 55, 60],
+                            borderColor: '#10b981',
+                            backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                            tension: 0.4,
+                            fill: true
+                        },
+                        {
+                            label: '线下消费',
+                            data: [80, 65, 55, 45, 40],
+                            borderColor: '#3b82f6',
+                            backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                            tension: 0.4,
+                            fill: true
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            min: 0,
+                            max: 100,
+                            title: {
+                                display: true,
+                                text: '占比（%）'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function initElderlyServiceChart() {
+            const ctx = document.getElementById('elderlyServiceChart').getContext('2d');
+            window.charts.elderlyServiceChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['2018', '2020', '2022', '2024', '2025'],
+                    datasets: [
+                        {
+                            label: '服务使用量（万单）',
+                            data: [30, 110, 230, 370, 500],
+                            backgroundColor: 'rgba(239, 68, 68, 0.7)'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            title: {
+                                display: true,
+                                text: '服务使用量（万单）'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // 面板4图表
+        function initCityLevelChart() {
+            const ctx = document.getElementById('cityLevelChart').getContext('2d');
+            window.charts.cityLevelChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['一线城市', '二线城市', '三线城市', '四线及以下城市'],
+                    datasets: [
+                        {
+                            data: [30, 35, 20, 15],
+                            backgroundColor: [
+                                '#3b82f6', '#10b981', '#8b5cf6', '#f59e0b'
+                            ],
+                            borderWidth: 0
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const label = context.label || '';
+                                    const value = context.raw || 0;
+                                    return `${label}: ${value}%`;
+                                }
+                            }
+                        }
+                    },
+                    cutout: '60%'
+                }
+            });
+        }
+
+        function initStoreDensityChart() {
+            const ctx = document.getElementById('storeDensityChart').getContext('2d');
+            window.charts.storeDensityChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['2018', '2020', '2022', '2024', '2025'],
+                    datasets: [
+                        {
+                            label: '一线城市',
+                            data: [18, 20, 21, 23, 24],
+                            borderColor: '#3b82f6',
+                            backgroundColor: 'transparent',
+                            tension: 0.4
+                        },
+                        {
+                            label: '二线城市',
+                            data: [10, 14, 17, 20, 22],
+                            borderColor: '#10b981',
+                            backgroundColor: 'transparent',
+                            tension: 0.4
+                        },
+                        {
+                            label: '三四线城市',
+                            data: [5.2, 9, 14, 19, 24],
+                            borderColor: '#8b5cf6',
+                            backgroundColor: 'transparent',
+                            tension: 0.4
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            title: {
+                                display: true,
+                                text: '店/百万人口'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function initPriceDifferenceChart() {
+            const ctx = document.getElementById('priceDifferenceChart').getContext('2d');
+            window.charts.priceDifferenceChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['生鲜食品', '家居用品', '美妆护肤', '进口商品', '休闲食品'],
+                    datasets: [
+                        {
+                            label: '二线城市',
+                            data: [5, 3, 0, 6, 2],
+                            backgroundColor: 'rgba(16, 185, 129, 0.7)'
+                        },
+                        {
+                            label: '三线城市',
+                            data: [9, 6, 4, 12, 5],
+                            backgroundColor: 'rgba(139, 92, 246, 0.7)'
+                        },
+                        {
+                            label: '四线城市',
+                            data: [13, 10, 8, 17, 9],
+                            backgroundColor: 'rgba(245, 158, 11, 0.7)'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            title: {
+                                display: true,
+                                text: '价格差异（%，以一线城市为基准）'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // 页面加载时初始化第一个面板的图表
+        window.addEventListener('load', () => {
+            initChartsForPanel('panel1');
+        });
+    </script>
+	<br />
+		<br />
+		<br />
+	<div id="qushi1">
+	   <br />
+		<br />
+	<!-- 3 -->
+ <!-- 品质类零售业发展趋势可视化分析板块 -->
+		</div>
+<div class="quality-retail-analysis">
+	<header class="text-center mb-12">
+            <h1 class="text-[clamp(1.8rem,5vw,3rem)] font-bold text-dark mb-4 relative inline-block">
+               可视化设计分析发展趋势
+                <span class="absolute -bottom-2 left-0 w-full h-1 bg-primary rounded-full transform scale-x-50 transition-transform duration-300 origin-bottom-center hover:scale-x-100"></span>
+            </h1>
+            <p class="text-neutral text-lg max-w-3xl mx-auto">
+               <font size="+1"> 利用AI设计分析可视化发展趋势，涉及传统与品质超市消费升级对比、不同群体需求差异及带复购率的中国品质零售分布。</font>
+            </p>
+        </header>
+  <!-- 控制面板 -->
+	<div class="container mx-auto px-4 py-12 max-w-8xl" id="fenxi">
+  <div class="mb-8 glass-effect rounded-xl p-4 shadow-md">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-1"><font size="+1">选择年份</font></label>
+        <div class="relative">
+          <select id="year-selector" class="block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-primary focus:border-primary sm:text-sm rounded-lg">
+           <option value="2018"><font size="+1">2018年</font></option>
+            <option value="2019"><font size="+1">2019年</font></option>
+            <option value="2020"><font size="+1">2020年</font></option>
+            <option value="2021"><font size="+1">2021年</font></option>
+            <option value="2022"><font size="+1">2022年</font></option>
+            <option value="2023"><font size="+1">2023年</font></option>
+            <option value="2024" selected><font size="+1">2024年</font></option>
+          </select>
+          <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+            
+          </div>
+        </div>
+      </div>
+      
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-1"><font size="+1">选择消费群体</font></label>
+        <div class="flex flex-wrap gap-1">
+          <button class="group-btn active px-4 py-2 rounded-full text-sm bg-primary text-white" data-group="all"><font size="+1">全部</font></font></button>
+          <button class="group-btn px-4 py-2 rounded-full text-sm bg-gray-200 hover:bg-gray-300 transition-colors" data-group="zgen"><font size="+1">Z世代</font></button>
+          <button class="group-btn px-4 py-2 rounded-full text-sm bg-gray-200 hover:bg-gray-300 transition-colors" data-group="middle"><font size="+1">中产阶级</font></button>
+          <button class="group-btn px-4 py-2 rounded-full text-sm bg-gray-200 hover:bg-gray-300 transition-colors" data-group="silver"><font size="+1">银发群体</font></button>
+        </div>
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-1"><font size="+1">AI分析选项</font></label>
+        <div class="flex items-center space-x-4">
+          <label class="inline-flex items-center">
+            <input type="checkbox" id="show-forecast" class="form-checkbox text-primary" checked>
+            <span class="ml-2 text-sm text-gray-700"><font size="+1">显示预测趋势</font></span>
+          </label>
+          <label class="inline-flex items-center">
+            <input type="checkbox" id="show-insights" class="form-checkbox text-primary" checked>
+            <span class="ml-2 text-sm text-gray-700"><font size="+1">显示AI洞察</font></span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 图表1：消费品质升级对比数据图 -->
+  <section class="mb-12">
+    <div class="flex justify-between items-center mb-4">
+      <h3 class="text-xl font-bold text-gray-800">1. 消费品质升级对比分析</h3>
+      <div class="text-sm text-primary bg-primary/10 px-3 py-1 rounded-full">
+        <i class="fa fa-info-circle mr-1"></i> 点击查看居民可支配收入
+      </div>
+    </div>
+    
+    <div class="chart-container gradient-border h-[500px]">
+      <canvas id="qualityUpgradeChart"></canvas>
+      
+      <!-- AI分析卡片 -->
+      <div id="insight-card-1" class="absolute bottom-4 right-4 bg-white p-3 rounded-lg shadow-lg border-l-4 border-primary max-w-xs">
+        <div class="flex items-start">
+          <i class="fa fa-lightbulb-o text-yellow-500 text-xl mt-1 mr-2"></i>
+          <div>
+            <h4 class="font-semibold text-base mb-1">AI洞察</h4>
+            <p class="text-xs text-gray-600"><font size="+1">品质类超市销售额增速是传统超市的<strong><font color="#3B82F6">3.2倍</font></strong>，与居民可支配收入增长呈现<strong><font color="#3B82F6">0.87</font></strong>的强相关性</font></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 图表2：消费群体需求差异 -->
+  <section class="mb-12">
+    <div class="flex justify-between items-center mb-4">
+      <h3 class="text-xl font-bold text-gray-800">2. 消费群体需求差异分析</h3>
+      <div class="text-sm text-primary bg-primary/10 px-3 py-1 rounded-full">
+        <i class="fa fa-users mr-1"></i> 多群体消费特征对比
+      </div>
+    </div>
+    
+    <div class="chart-container gradient-border h-[500px]">
+      <canvas id="consumerGroupsChart"></canvas>
+      
+      <!-- AI分析卡片 -->
+      <div id="insight-card-2" class="absolute bottom-4 right-4 bg-white p-3 rounded-lg shadow-lg border-l-4 border-accent max-w-xs">
+        <div class="flex items-start">
+          <i class="fa fa-lightbulb-o text-yellow-500 text-xl mt-1 mr-2"></i>
+          <div>
+            <h4 class="font-semibold text-base mb-1">AI洞察</h4>
+            <p class="text-xs text-gray-600"><font size="+1">Z世代对体验式消费需求增长最快，年增速达<strong><font color="#3B82F6">27%</font></strong>；银发群体对品质食品需求提升显著</font></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 图表3：中国地图品质零售分布图 -->
+  <section class="mb-12">
+    <div class="flex justify-between items-center mb-4">
+      <h3 class="text-xl font-bold text-gray-800">3. 中国品质零售分布与复购率</h3>
+      <div class="text-sm text-primary bg-primary/10 px-3 py-1 rounded-full">
+        <i class="fa fa-map-marker mr-1"></i> 颜色越深表示复购率越高
+      </div>
+    </div>
+    
+    <div class="chart-container gradient-border h-[600px]">
+      <!-- 地图控制 -->
+      <div class="absolute top-4 right-4 z-10 bg-white rounded-lg shadow-md p-2 flex flex-col space-y-2">
+        <button class="map-filter-btn active px-3 py-1 text-sm rounded bg-primary text-white" data-chain="all"><font size="+1">全部品牌</font></button>
+        <button class="map-filter-btn px-3 py-1 text-sm rounded bg-gray-200" data-chain="sam"><font size="+1">山姆</font></button>
+        <button class="map-filter-btn px-3 py-1 text-sm rounded bg-gray-200" data-chain="pangdonglai"><font size="+1">胖东来</font></button>
+        <button class="map-filter-btn px-3 py-1 text-sm rounded bg-gray-200" data-chain="hema"><font size="+1">盒马</font></button>
+      </div>
+      
+      <!-- 地图容器 -->
+      <div id="china-map" class="w-full h-full"></div>
+      
+      <!-- 复购率图例 -->
+      <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg shadow-md p-3">
+        <h4 class="text-sm font-semibold mb-2"><font size="+1">复购率区间</font></h4>
+        <div class="flex items-center space-x-2">
+          <div class="w-4 h-4 bg-blue-100 rounded-full"></div>
+          <span class="text-xs"><font size="+1">30%-40%</font></span>
+        </div>
+        <div class="flex items-center space-x-2">
+          <div class="w-4 h-4 bg-blue-300 rounded-full"></div>
+          <span class="text-xs"><font size="+1">40%-50%</font></span>
+        </div>
+        <div class="flex items-center space-x-2">
+          <div class="w-4 h-4 bg-blue-500 rounded-full"></div>
+          <span class="text-xs"><font size="+1">50%-60%</font></span>
+        </div>
+        <div class="flex items-center space-x-2">
+          <div class="w-4 h-4 bg-blue-700 rounded-full"></div>
+          <span class="text-xs"><font size="+1">60%+</font></span>
+        </div>
+      </div>
+      
+      <!-- AI分析卡片 -->
+      <div id="insight-card-3" class="absolute top-4 left-4 bg-white p-3 rounded-lg shadow-lg border-l-4 border-chart-5 max-w-xs">
+        <div class="flex items-start">
+          <i class="fa fa-lightbulb-o text-yellow-500 text-xl mt-1 mr-2"></i>
+          <div>
+            <h4 class="font-semibold text-base mb-1">AI洞察</h4>
+            <p class="text-xs text-gray-600"><font size="+1">品质零售在一二线城市密度最高，但三四线城市增速更快，年增长率达<strong><font color="#3B82F6">23%</font></strong>，显示消费升级的普惠性</font></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI综合分析报告 -->
+  <section class="mb-12 glass-effect rounded-xl p-6 shadow-md">
+    <h3 class="text-xl font-bold text-gray-800 mb-4"><font size="+1">AI综合分析报告</font></h3>
+    
+    <div class="prose max-w-none">
+      <p class="text-gray-700">
+        <span class="font-semibold"><font size="+1">AI分析结论：</span> 基于近5年数据分析，品质类零售业的崛起并非偶然现象，而是与居民可支配收入增长(年复合增长率6.8%)、消费结构升级密切相关。品质类超市的客单价是传统超市的<strong><font color="#3B82F6">2.3倍</font></strong>，且复购率高出<strong><font color="#3B82F6">35%</font></strong>，反映出消费者对品质生活的持续追求。</font>
+      </p>
+      
+      <p class="text-gray-700 mt-3">
+        <font size="+1">从区域发展看，品质零售正从一二线城市向三四线城市渗透，2024年三四线城市品质超市数量<strong><font color="#3B82F6">同比增长达27%</font></strong>，显示消费升级的普惠性特征。不同人群的消费需求呈现多元化趋势，Z世代更注重体验和社交属性，中产阶级追求性价比与品质并重，银发群体则对健康食品和便利服务有更高要求。</font>
+      </p>
+      
+      <p class="text-gray-700 mt-3">
+        <span class="font-semibold"><font size="+1">未来趋势预测：</span> 到2026年，品质类零售业市场规模预计将突破<strong><font color="#3B82F6">8000亿</font></strong>元，年复合增长率保持在18%以上。线上线下融合的即时零售模式将成为主流，预计占比将达到品质零售总额的<strong><font color="#3B82F6">45%</font></strong>。</font>
+      </p>
+    </div>
+  </section>
+</div>
+</div>
+
+<style>
+  /* 自定义工具类 */
+  .content-auto {
+    content-visibility: auto;
+  }
+  .chart-container {
+    position: relative;
+    width: 100%;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    background-color: white;
+    padding: 1rem;
+    transition: all 300ms ease-in-out;
+  }
+  .chart-container:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  .glass-effect {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+  }
+  .gradient-border {
+    position: relative;
+  }
+  .gradient-border::before {
+    position: absolute;
+    inset: 0;
+    z-index: -10;
+    border-radius: 0.75rem;
+    background: linear-gradient(to right, #165DFF, #722ED1);
+    padding: 2px;
+    margin: -2px;
+    content: "";
+  }
+  .pulse-animation {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+
+  /* 颜色变量 */
+  :root {
+    --color-primary: #165DFF;
+    --color-secondary: #36CFC9;
+    --color-accent: #722ED1;
+    --color-neutral: #1F2937;
+    --color-neutral-light: #F5F7FA;
+    --color-chart-1: #165DFF;
+    --color-chart-2: #722ED1;
+    --color-chart-3: #F53F3F;
+    --color-chart-4: #FF7D00;
+    --color-chart-5: #0FC6C2;
+  }
+
+  /* 表单样式 */
+  .form-checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    padding: 2px;
+    background-clip: content-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    transition: border-color 0.2s ease-in-out;
+  }
+  .form-checkbox:checked {
+    border-color: var(--color-primary);
+    background-color: var(--color-primary);
+  }
+
+  /* 按钮样式 */
+  .group-btn, .map-filter-btn {
+    transition: all 0.2s ease-in-out;
+  }
+  .group-btn:hover, .map-filter-btn:hover {
+    transform: translateY(-1px);
+  }
+  .group-btn.active, .map-filter-btn.active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(22, 93, 255, 0.2);
+  }
+
+  /* 报告文本样式 */
+  .prose {
+    color: #4B5563;
+    line-height: 1.7;
+  }
+  .prose p {
+    margin-bottom: 1rem;
+  }
+  .prose .font-semibold {
+    font-weight: 600;
+  }
+  
+  /* 地图样式改进 */
+  #china-map {
+    background-image: url("pic/map.jpg");
+	  width: 70%;
+	 margin-left: 200px;
+	  margin-bottom: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .china-map-outline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://picsum.photos/id/239/1600/900');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: 1;
+    mix-blend-mode: overlay;
+  }
+</style>
+
+<!-- 引入Chart.js库 -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- 引入Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script>
+  // 等待DOM加载完成
+  document.addEventListener('DOMContentLoaded', function() {
+    // 1. 消费品质升级对比图表
+    const qualityUpgradeCtx = document.getElementById('qualityUpgradeChart').getContext('2d');
+    
+    // 历年数据
+    const yearData = {
+      "2018": {
+        traditional: 100,
+        quality: 100,
+        income: 28228
+      },
+      "2019": {
+        traditional: 108,
+        quality: 125,
+        income: 30733
+      },
+      "2020": {
+        traditional: 105,
+        quality: 148,
+        income: 32189
+      },
+      "2021": {
+        traditional: 112,
+        quality: 180,
+        income: 35128
+      },
+      "2022": {
+        traditional: 118,
+        quality: 215,
+        income: 36883
+      },
+      "2023": {
+        traditional: 125,
+        quality: 260,
+        income: 39218
+      },
+      "2024": {
+        traditional: 132,
+        quality: 310,
+        income: 41690
+      }
+    };
+    
+    // 消费群体细分数据 - 品质超市消费占比
+    const groupConsumptionData = {
+      "2018": {
+        zgen: 15,
+        middle: 45,
+        silver: 20
+      },
+      "2019": {
+        zgen: 18,
+        middle: 46,
+        silver: 22
+      },
+      "2020": {
+        zgen: 22,
+        middle: 47,
+        silver: 24
+      },
+      "2021": {
+        zgen: 25,
+        middle: 48,
+        silver: 26
+      },
+      "2022": {
+        zgen: 28,
+        middle: 47,
+        silver: 28
+      },
+      "2023": {
+        zgen: 31,
+        middle: 46,
+        silver: 30
+      },
+      "2024": {
+        zgen: 35,
+        middle: 45,
+        silver: 32
+      }
+    };
+    
+    // 获取所有年份并排序
+    const years = Object.keys(yearData).sort();
+    const traditionalSales = years.map(year => yearData[year].traditional);
+    const qualitySales = years.map(year => yearData[year].quality);
+    const incomeData = years.map(year => yearData[year].income);
+    
+    // 预测数据（未来3年）
+    const forecastYears = ['2025', '2026', '2027'];
+    const traditionalSalesForecast = [138, 145, 152];
+    const qualitySalesForecast = [365, 420, 480];
+    const incomeForecast = [44200, 46800, 49500];
+    
+    // 创建图表
+    const qualityUpgradeChart = new Chart(qualityUpgradeCtx, {
+      type: 'line',
+      data: {
+        labels: [...years, ...(document.getElementById('show-forecast').checked ? forecastYears : [])],
+        datasets: [
+          {
+            label: '传统超市销售额指数',
+            data: [...traditionalSales, ...(document.getElementById('show-forecast').checked ? traditionalSalesForecast : [])],
+            borderColor: '#F53F3F',
+            backgroundColor: 'rgba(245, 63, 63, 0.1)',
+            borderWidth: 2,
+            fill: true,
+            tension: 0.3,
+            yAxisID: 'y'
+          },
+          {
+            label: '品质类超市销售额指数',
+            data: [...qualitySales, ...(document.getElementById('show-forecast').checked ? qualitySalesForecast : [])],
+            borderColor: '#165DFF',
+            backgroundColor: 'rgba(22, 93, 255, 0.1)',
+            borderWidth: 2,
+            fill: true,
+            tension: 0.3,
+            yAxisID: 'y'
+          },
+          {
+            label: '居民人均可支配收入(元)',
+            data: [...incomeData, ...(document.getElementById('show-forecast').checked ? incomeForecast : [])],
+            borderColor: '#36CFC9',
+            backgroundColor: 'transparent',
+            borderWidth: 2,
+            borderDash: [5, 5],
+            pointBackgroundColor: '#36CFC9',
+            tension: 0.3,
+            yAxisID: 'y1',
+            pointRadius: 4,
+            pointHoverRadius: 6
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        interaction: {
+          mode: 'index',
+          intersect: false,
+        },
+        animation: {
+          duration: 1500,
+          easing: 'easeOutQuart'
+        },
+        scales: {
+          y: {
+            type: 'linear',
+            display: true,
+            position: 'left',
+            title: {
+              display: true,
+              text: '销售额指数 (2018=100)'
+            },
+            grid: {
+              drawOnChartArea: false
+            }
+          },
+          y1: {
+            type: 'linear',
+            display: true,
+            position: 'right',
+            title: {
+              display: true,
+              text: '居民人均可支配收入 (元)'
+            },
+            grid: {
+              drawOnChartArea: false
+            },
+            ticks: {
+              callback: function(value) {
+                return value.toLocaleString();
+              }
+            }
+          },
+          x: {
+            grid: {
+              display: false
+            }
+          }
+        },
+        plugins: {
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                let label = context.dataset.label || '';
+                if (label) {
+                  label += ': ';
+                }
+                if (context.datasetIndex === 2) {
+                  label += context.raw.toLocaleString() + '元';
+                } else {
+                  label += context.raw;
+                }
+                return label;
+              }
+            }
+          },
+          legend: {
+            position: 'top',
+          }
+        }
+      }
+    });
+    
+    // 2. 消费群体需求差异图表
+    const consumerGroupsCtx = document.getElementById('consumerGroupsChart').getContext('2d');
+    
+    // 数据 - 按年份区分
+    const groupDataByYear = {
+      "2018": {
+        zgen: [5.0, 6.5, 5.8, 7.2, 5.9, 6.3],
+        middle: [6.8, 5.3, 4.8, 8.6, 7.0, 3.8],
+        silver: [7.3, 4.8, 4.3, 7.9, 7.8, 2.8]
+      },
+      "2019": {
+        zgen: [5.2, 6.8, 6.0, 7.0, 6.0, 6.5],
+        middle: [7.0, 5.5, 5.0, 8.5, 7.2, 4.0],
+        silver: [7.5, 5.0, 4.5, 7.8, 8.0, 3.5]
+      },
+      "2020": {
+        zgen: [5.5, 7.5, 6.8, 7.1, 6.5, 7.2],
+        middle: [7.5, 6.2, 5.5, 8.6, 7.8, 4.5],
+        silver: [8.0, 6.0, 4.8, 7.9, 8.5, 3.8]
+      },
+      "2021": {
+        zgen: [6.0, 8.2, 7.5, 7.2, 7.0, 8.0],
+        middle: [8.0, 7.0, 6.2, 8.7, 8.2, 5.0],
+        silver: [8.5, 7.0, 5.2, 8.0, 9.0, 4.2]
+      },
+      "2022": {
+        zgen: [6.3, 8.8, 8.0, 7.2, 7.3, 8.5],
+        middle: [8.2, 7.5, 6.8, 8.8, 8.5, 5.8],
+        silver: [8.8, 8.0, 5.8, 8.0, 9.3, 4.5]
+      },
+      "2023": {
+        zgen: [6.5, 9.0, 8.2, 7.3, 7.4, 8.8],
+        middle: [8.4, 7.7, 7.0, 8.8, 8.6, 6.2],
+        silver: [8.9, 8.3, 6.0, 8.0, 9.4, 4.8]
+      },
+      "2024": {
+        zgen: [6.8, 9.2, 8.5, 7.3, 7.5, 9.0],
+        middle: [8.5, 7.8, 7.2, 8.8, 8.7, 6.5],
+        silver: [9.0, 8.5, 6.2, 8.0, 9.5, 5.0]
+      }
+    };
+    
+    const groupCategories = ['品质食品', '服务体验', '场景氛围', '性价比', '健康安全', '社交属性'];
+    let selectedYear = document.getElementById('year-selector').value;
+    let selectedGroup = 'all';
+    
+    // 创建雷达图
+    const consumerGroupsChart = new Chart(consumerGroupsCtx, {
+      type: 'radar',
+      data: {
+        labels: groupCategories,
+        datasets: getGroupDatasets(selectedYear, selectedGroup)
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        elements: {
+          line: {
+            borderWidth: 3
+          }
+        },
+        scales: {
+          r: {
+            angleLines: {
+              display: true
+            },
+            suggestedMin: 0,
+            suggestedMax: 10
+          }
+        },
+        plugins: {
+          legend: {
+            position: 'top',
+          },
+          tooltip: {
+            callbacks: {
+              afterLabel: function(context) {
+                // 获取2019年数据进行对比
+                const baseValue = groupDataByYear["2019"][["zgen", "middle", "silver"][context.datasetIndex]][context.dataIndex];
+                const change = ((context.raw - baseValue) / baseValue * 100).toFixed(1);
+                return `较2019年变化: ${change}%`;
+              }
+            }
+          }
+        }
+      }
+    });
+    
+    // 根据选择的群体获取数据集
+    function getGroupDatasets(year, group) {
+      const datasets = [];
+      
+      if (group === 'all' || group === 'zgen') {
+        datasets.push({
+          label: 'Z世代',
+          data: groupDataByYear[year].zgen,
+          backgroundColor: 'rgba(114, 46, 209, 0.2)',
+          borderColor: 'rgba(114, 46, 209, 1)',
+          pointBackgroundColor: 'rgba(114, 46, 209, 1)',
+          pointBorderColor: '#fff',
+          pointHoverBackgroundColor: '#fff',
+          pointHoverBorderColor: 'rgba(114, 46, 209, 1)'
+        });
+      }
+      
+      if (group === 'all' || group === 'middle') {
+        datasets.push({
+          label: '中产阶级',
+          data: groupDataByYear[year].middle,
+          backgroundColor: 'rgba(22, 93, 255, 0.2)',
+          borderColor: 'rgba(22, 93, 255, 1)',
+          pointBackgroundColor: 'rgba(22, 93, 255, 1)',
+          pointBorderColor: '#fff',
+          pointHoverBackgroundColor: '#fff',
+          pointHoverBorderColor: 'rgba(22, 93, 255, 1)'
+        });
+      }
+      
+      if (group === 'all' || group === 'silver') {
+        datasets.push({
+          label: '银发群体',
+          data: groupDataByYear[year].silver,
+          backgroundColor: 'rgba(54, 207, 201, 0.2)',
+          borderColor: 'rgba(54, 207, 201, 1)',
+          pointBackgroundColor: 'rgba(54, 207, 201, 1)',
+          pointBorderColor: '#fff',
+          pointHoverBackgroundColor: '#fff',
+          pointHoverBorderColor: 'rgba(54, 207, 201, 1)'
+        });
+      }
+      
+      return datasets;
+    }
+    
+    // 3. 中国地图品质零售分布 - 改进版
+    const chinaMap = document.getElementById('china-map');
+    
+    // 添加地图轮廓层
+    const mapOutline = document.createElement('div');
+    mapOutline.className = 'china-map-outline';
+    chinaMap.appendChild(mapOutline);
+    
+    // 模拟地图数据 - 按年份和品牌区分
+    const mapDataByYear = {
+      "2024": {
+        "sam": [
+          {city: "北京", count: 12, repurchase: 58, province: "北京"},
+          {city: "上海", count: 15, repurchase: 62, province: "上海"},
+          {city: "广州", count: 8, repurchase: 59, province: "广东"},
+          {city: "深圳", count: 9, repurchase: 61, province: "广东"},
+          {city: "成都", count: 6, repurchase: 57, province: "四川"},
+          {city: "武汉", count: 5, repurchase: 55, province: "湖北"},
+          {city: "杭州", count: 5, repurchase: 58, province: "浙江"},
+          {city: "南京", count: 4, repurchase: 56, province: "江苏"}
+        ],
+        "pangdonglai": [
+          {city: "许昌", count: 6, repurchase: 72, province: "河南"},
+          {city: "新乡", count: 3, repurchase: 70, province: "河南"},
+          {city: "洛阳", count: 2, repurchase: 68, province: "河南"},
+          {city: "郑州", count: 4, repurchase: 69, province: "河南"}
+        ],
+        "hema": [
+          {city: "北京", count: 35, repurchase: 52, province: "北京"},
+          {city: "上海", count: 42, repurchase: 55, province: "上海"},
+          {city: "广州", count: 28, repurchase: 51, province: "广东"},
+          {city: "深圳", count: 30, repurchase: 53, province: "广东"},
+          {city: "成都", count: 22, repurchase: 49, province: "四川"},
+          {city: "武汉", count: 18, repurchase: 48, province: "湖北"},
+          {city: "杭州", count: 25, repurchase: 54, province: "浙江"},
+          {city: "南京", count: 15, repurchase: 50, province: "江苏"},
+          {city: "重庆", count: 16, repurchase: 47, province: "重庆"},
+          {city: "西安", count: 12, repurchase: 46, province: "陕西"}
+        ]
+      },
+      "2023": {
+        "sam": [
+          {city: "北京", count: 10, repurchase: 57, province: "北京"},
+          {city: "上海", count: 12, repurchase: 60, province: "上海"},
+          {city: "广州", count: 7, repurchase: 58, province: "广东"},
+          {city: "深圳", count: 8, repurchase: 60, province: "广东"},
+          {city: "成都", count: 5, repurchase: 56, province: "四川"},
+          {city: "武汉", count: 4, repurchase: 54, province: "湖北"},
+          {city: "杭州", count: 4, repurchase: 57, province: "浙江"},
+          {city: "南京", count: 3, repurchase: 55, province: "江苏"}
+        ],
+        "pangdonglai": [
+          {city: "许昌", count: 5, repurchase: 71, province: "河南"},
+          {city: "新乡", count: 2, repurchase: 69, province: "河南"},
+          {city: "洛阳", count: 2, repurchase: 67, province: "河南"},
+          {city: "郑州", count: 3, repurchase: 68, province: "河南"}
+        ],
+        "hema": [
+          {city: "北京", count: 30, repurchase: 51, province: "北京"},
+          {city: "上海", count: 38, repurchase: 54, province: "上海"},
+          {city: "广州", count: 25, repurchase: 50, province: "广东"},
+          {city: "深圳", count: 27, repurchase: 52, province: "广东"},
+          {city: "成都", count: 20, repurchase: 48, province: "四川"},
+          {city: "武汉", count: 15, repurchase: 47, province: "湖北"},
+          {city: "杭州", count: 22, repurchase: 53, province: "浙江"},
+          {city: "南京", count: 13, repurchase: 49, province: "江苏"},
+          {city: "重庆", count: 14, repurchase: 46, province: "重庆"},
+          {city: "西安", count: 10, repurchase: 45, province: "陕西"}
+        ]
+      }
+    };
+    
+    // 更精确的城市坐标映射
+    const cityPositions = {
+      "北京": {x: 73, y: 35},
+      "上海": {x: 84, y: 64},
+      "广州": {x: 68, y: 92},
+      "深圳": {x: 70, y: 95},
+      "成都": {x: 50, y: 68},
+      "武汉": {x: 70, y: 68},
+      "杭州": {x: 82, y: 68},
+      "南京": {x: 79.5, y: 62},
+      "许昌": {x: 69, y: 56},
+      "新乡": {x: 69, y: 52},
+      "洛阳": {x: 66, y: 55},
+      "郑州": {x: 68, y: 56},
+      "重庆": {x: 56, y: 71.5},
+      "西安": {x: 60, y: 56}
+    };
+    
+    // 生成地图
+    function renderMap(year = selectedYear, chain = 'all') {
+      // 清除现有标记但保留地图轮廓
+      const markers = chinaMap.querySelectorAll('.map-marker');
+      markers.forEach(marker => marker.remove());
+      
+      // 获取对应年份的数据
+      const yearData = mapDataByYear[year] || mapDataByYear["2024"];
+      
+      // 筛选数据
+      let displayData = [];
+      if (chain === 'all') {
+        Object.values(yearData).forEach(chainData => {
+          displayData = [...displayData, ...chainData];
+        });
+      } else {
+        displayData = yearData[chain] || [];
+      }
+      
+      // 添加城市标记
+      displayData.forEach(item => {
+        const pos = cityPositions[item.city];
+        if (pos) {
+          const marker = document.createElement('div');
+          marker.className = 'map-marker absolute transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group z-20';
+          marker.style.left = `${pos.x}%`;
+          marker.style.top = `${pos.y}%`;
+          
+          // 根据复购率确定颜色
+          let colorClass = 'bg-blue-100'; // 30-40%
+          if (item.repurchase >= 40 && item.repurchase < 50) colorClass = 'bg-blue-300';
+          else if (item.repurchase >= 50 && item.repurchase < 60) colorClass = 'bg-blue-500';
+          else if (item.repurchase >= 60) colorClass = 'bg-blue-700';
+          
+          // 标记点
+          const dot = document.createElement('div');
+          dot.className = `${colorClass} rounded-full transition-all duration-300 group-hover:scale-125`;
+          const size = 8 + (item.count / 5); // 增大标记点
+          dot.style.width = `${size}px`;
+          dot.style.height = `${size}px`;
+          
+          // 添加脉冲动画效果
+          const pulse = document.createElement('div');
+          pulse.className = `${colorClass} rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-ping opacity-75`;
+          pulse.style.width = `${size * 2}px`;
+          pulse.style.height = `${size * 2}px`;
+          
+          // 弹出信息
+          const tooltip = document.createElement('div');
+          tooltip.className = 'absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 bg-white rounded-lg shadow-lg p-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10';
+          tooltip.innerHTML = `
+            <div class="font-semibold text-sm">${item.city} (${item.province})</div>
+            <div class="text-xs text-gray-600">门店数量: ${item.count}</div>
+            <div class="text-xs text-gray-600">复购率: ${item.repurchase}%</div>
+          `;
+          
+          marker.appendChild(pulse);
+          marker.appendChild(dot);
+          marker.appendChild(tooltip);
+          chinaMap.appendChild(marker);
+        }
+      });
+    }
+    
+    // 初始渲染地图
+    renderMap();
+    
+    // 事件监听 - 年份选择器
+    document.getElementById('year-selector').addEventListener('change', function() {
+      selectedYear = this.value;
+      
+      // 更新消费品质升级图表
+      qualityUpgradeChart.data.labels = [...years.filter(y => y <= selectedYear), ...(document.getElementById('show-forecast').checked ? forecastYears : [])];
+      qualityUpgradeChart.data.datasets[0].data = [...traditionalSales.filter((_, i) => years[i] <= selectedYear), ...(document.getElementById('show-forecast').checked ? traditionalSalesForecast : [])];
+      qualityUpgradeChart.data.datasets[1].data = [...qualitySales.filter((_, i) => years[i] <= selectedYear), ...(document.getElementById('show-forecast').checked ? qualitySalesForecast : [])];
+      qualityUpgradeChart.data.datasets[2].data = [...incomeData.filter((_, i) => years[i] <= selectedYear), ...(document.getElementById('show-forecast').checked ? incomeForecast : [])];
+      qualityUpgradeChart.update();
+      
+      // 更新消费群体图表
+      consumerGroupsChart.data.datasets = getGroupDatasets(selectedYear, selectedGroup);
+      consumerGroupsChart.update();
+      
+      // 更新地图
+      renderMap(selectedYear);
+    });
+    
+    // 群体筛选按钮 - 实现交互功能
+    document.querySelectorAll('.group-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        // 更新按钮状态
+        document.querySelectorAll('.group-btn').forEach(b => {
+          b.classList.remove('active', 'bg-primary', 'text-white');
+          b.classList.add('bg-gray-200');
+        });
+        this.classList.add('active', 'bg-primary', 'text-white');
+        this.classList.remove('bg-gray-200');
+        
+        // 更新选中的群体
+        selectedGroup = this.dataset.group;
+        
+        // 更新消费群体图表
+        consumerGroupsChart.data.datasets = getGroupDatasets(selectedYear, selectedGroup);
+        consumerGroupsChart.update();
+        
+        // 更新AI洞察卡片内容
+        updateInsightCard2(selectedGroup);
+      });
+    });
+    
+    // 更新群体分析洞察卡片内容
+    function updateInsightCard2(group) {
+      const insightText = {
+        'all': 'Z世代对体验式消费需求增长最快，年增速达27%；银发群体对品质食品需求提升显著',
+        'zgen': 'Z世代更注重社交属性和服务体验，年增速分别达27%和24%，偏好线上线下融合的购物模式',
+        'middle': '中产阶级最关注性价比与健康安全，对品质的要求持续提升，客单价年增长12%',
+        'silver': '银发群体对品质食品和健康安全关注度最高，年增速18%，更重视实体店的服务体验'
+      };
+      
+      document.querySelector('#insight-card-2 p').textContent = insightText[group] || insightText['all'];
+    }
+    
+    // 地图筛选按钮
+    document.querySelectorAll('.map-filter-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.map-filter-btn').forEach(b => {
+          b.classList.remove('active', 'bg-primary', 'text-white');
+          b.classList.add('bg-gray-200');
+        });
+        this.classList.add('active', 'bg-primary', 'text-white');
+        this.classList.remove('bg-gray-200');
+        
+        // 更新地图
+        renderMap(selectedYear, this.dataset.chain);
+      });
+    });
+    
+    // 预测趋势切换
+    document.getElementById('show-forecast').addEventListener('change', function() {
+      qualityUpgradeChart.data.labels = [...years.filter(y => y <= selectedYear), ...(this.checked ? forecastYears : [])];
+      qualityUpgradeChart.data.datasets[0].data = [...traditionalSales.filter((_, i) => years[i] <= selectedYear), ...(this.checked ? traditionalSalesForecast : [])];
+      qualityUpgradeChart.data.datasets[1].data = [...qualitySales.filter((_, i) => years[i] <= selectedYear), ...(this.checked ? qualitySalesForecast : [])];
+      qualityUpgradeChart.data.datasets[2].data = [...incomeData.filter((_, i) => years[i] <= selectedYear), ...(this.checked ? incomeForecast : [])];
+      qualityUpgradeChart.update();
+    });
+    
+    // AI洞察显示切换
+    document.getElementById('show-insights').addEventListener('change', function() {
+      document.querySelectorAll('[id^="insight-card-"]').forEach(card => {
+        card.style.display = this.checked ? 'block' : 'none';
+      });
+    });
+  });
+</script>
+<div id="summary1">
+	</div>
+	<br />
+ <!-- 4 -->
+<!-- 总结与思考——民生需求重塑零售业 -->
+	<header class="text-center mb-12">
+            <h1 class="text-[clamp(1.8rem,5vw,3rem)] font-bold text-dark mb-4 relative inline-block">
+               总结与思考
+                <span class="absolute -bottom-2 left-0 w-full h-1 bg-primary rounded-full transform scale-x-50 transition-transform duration-300 origin-bottom-center hover:scale-x-100"></span>
+            </h1>
+            <p class="text-neutral text-lg max-w-3xl mx-auto">
+                民生需求重塑零售业
+            </p>
+        </header>
+
+  
+  <!-- 胖东来案例分析 -->
+<div class="container mx-auto px-4 py-12 max-w-8xl" id="fenxi">
+  <div class="mb-8 bg-white rounded-lg p-5 shadow-sm border border-gray-100 transform transition-all hover:shadow-md">
+    <h3 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+      <i class="fa fa-shopping-bag text-primary mr-2"></i>
+      从胖东来的"极致服务"看零售业变革
+    </h3>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="md:col-span-2">
+        <p class="text-gray-700 mb-4">
+         <font size="+1"> 胖东来的发展轨迹为我们提供了一个绝佳样本：这家深耕河南的区域超市，在全国传统零售业普遍面临困境的2023年，却实现了<strong><font size="+1">40%</font></strong>的同比增长，单店日均客流量突破<strong><font color="#3B82F6">1.5万</font></strong>人次。</font>
+        </p>
+        <p class="text-gray-700 mb-4">
+          <font size="+1">其成功的关键，在于将"贴近民生"做到了极致——30天无理由退货（包括已使用商品）、免费送货上门（无最低消费限制）、卫生间配备母婴台和应急用品、员工拥有"先斩后奏"的5000元以内自主赔付权。这些看似"反商业"的举措，恰恰击中了消费者对"被尊重"和"安全感"的深层需求。</font>
+        </p>
+        <p class="text-gray-700">
+         <font size="+1"> 胖东来的案例证明：零售业的核心竞争力已从"稀缺供给"转向"情感连接"，谁能精准解决普通人"过日子"的痛点，谁就能在激烈竞争中脱颖而出。</font>
+        </p>
+      </div>
+      
+      <div class="bg-gray-50 rounded-lg p-4 border border-gray-100">
+        <h4 class="font-medium text-gray-800 mb-3 text-center"><font size="+1">胖东来顾客满意度数据</font></h4>
+        <div class="space-y-4">
+          <div>
+            <div class="flex justify-between text-sm mb-1">
+              <span><font size="+1">顾客复购率</font></span>
+              <span class="font-semibold"><font size="+1">72%</font></span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2">
+              <div class="bg-primary h-2 rounded-full" style="width: 72%"></div>
+            </div>
+          </div>
+          
+          <div>
+            <div class="flex justify-between text-sm mb-1">
+              <span><font size="+1">服务满意度</font></span>
+              <span class="font-semibold"><font size="+1">96%</font></span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2">
+              <div class="bg-primary h-2 rounded-full" style="width: 96%"></div>
+            </div>
+          </div>
+          
+          <div>
+            <div class="flex justify-between text-sm mb-1">
+              <span><font size="+1">商品满意度</font></span>
+              <span class="font-semibold"><font size="+1">92%</font></span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2">
+              <div class="bg-primary h-2 rounded-full" style="width: 92%"></div>
+            </div>
+          </div>
+          
+          <div>
+            <div class="flex justify-between text-sm mb-1">
+              <span><font size="+1">口碑推荐率</font></span>
+              <span class="font-semibold"><font size="+1">89%</font></span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2">
+              <div class="bg-primary h-2 rounded-full" style="width: 89%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- 消费心理变迁分析 -->
+ <div class="mb-10">
+  <h3 class="text-2xl font-semibold text-gray-800 mb-6 flex items-center">
+    <i class="fa fa-heart text-accent mr-3 text-lg"></i>
+    消费心理的深层变迁：从"拥有"到"体验"
+  </h3>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <!-- 左侧：品质觉醒趋势 -->
+     <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-100 transition-all duration-300 hover:shadow-md">​
+      <h4 class="font-semibold text-xl text-primary mb-5"><font size="+2">品质觉醒：2025年消费市场首要趋势</font></h4>​
+      <ul class="space-y-4 text-gray-700 text-base pl-1"> <!-- 减少左侧默认内边距 -->​
+        <li class="flex items-start">​
+          <i class="fa fa-check-circle text-primary mt-1 mr-2 flex-shrink-0 text-lg"></i> <!-- 缩小图标与文字间距 -->​
+         <font size="+1"> <span><strong>健康优先</strong>：有机食品销售额年增速达<strong>23%</strong>，消费者愿为健康溢价支付15-30%的额外成本</span>​
+        </li>​
+        <li class="flex items-start">​
+          <i class="fa fa-check-circle text-primary mt-1 mr-2 flex-shrink-0 text-lg"></i>​
+          <span><strong>体验至上</strong>：68%的消费者表示"购物体验"比"价格"更重要，推动超市场景化改造</span>​
+        </li>​
+        <li class="flex items-start">​
+          <i class="fa fa-check-circle text-primary mt-1 mr-2 flex-shrink-0 text-lg"></i>​
+          <span><strong>情感价值</strong>：带有温度的服务能提升顾客忠诚度<strong>40%</strong>以上，催生"超市社交"新现象</span>​
+        </li>​
+        <li class="flex items-start">​
+          <i class="fa fa-check-circle text-primary mt-1 mr-2 flex-shrink-0 text-lg"></i>​
+          <span><strong>理性消费</strong>：82%的消费者会研究商品成分和性价比，"冲动消费"占比下降<strong>18%</strong></span>​</font>
+        </li>​
+      </ul>​
+    </div>
+    
+    <!-- 右侧：民生进步轨迹 -->
+    <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-100 transition-all duration-300 hover:shadow-md">
+      <h4 class="font-semibold text-xl text-primary mb-5"><font size="+2">民生进步的真实轨迹</font></h4>
+      <p class="text-gray-700 mb-5 text-base">
+       <font size="+1"> 山姆、胖东来等品质类超市的崛起，本质上反映了中国民生从"物质满足"向"品质生活"的跨越。这种变迁体现在：</font>
+      </p>
+      <div class="space-y-4 text-gray-700 text-base">
+        <div class="flex items-center p-4 bg-gray-50 rounded-md">
+          <div class="w-3 h-3 rounded-full bg-primary mr-4 flex-shrink-0"></div>
+          <span>居民用于"改善型消费"的支出占比从2018年的38%<strong>升至2024年的57%</strong></span>
+        </div>
+        <div class="flex items-center p-4 bg-gray-50 rounded-md">
+          <div class="w-3 h-3 rounded-full bg-primary mr-4 flex-shrink-0"></div>
+          <span>服务类消费增速连续5年超过商品类消费，2024年达<strong>18.6%</strong></span>
+        </div>
+        <div class="flex items-center p-4 bg-gray-50 rounded-md">
+          <div class="w-3 h-3 rounded-full bg-primary mr-4 flex-shrink-0"></div>
+          <span>三四线城市品质消费增速<strong>（23%）</strong>超过一二线城市（15%），呈现普惠性特征</span>
+        </div>
+        <div class="flex items-center p-4 bg-gray-50 rounded-md">
+          <div class="w-3 h-3 rounded-full bg-primary mr-4 flex-shrink-0"></div>
+          <span>消费者对"幸福感"的定义中，"生活品质"占比从2018年的21%升至2024年的<strong>43%</strong></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <!-- 对零售业和社会的影响 -->
+  <div class="bg-gradient-to-r from-primary/5 to-accent/5 rounded-xl p-6 border border-primary/10">
+    <h3 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+      <i class="fa fa-line-chart text-primary mr-2"></i>
+      对零售业乃至社会民生的深远影响
+    </h3>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="bg-white p-4 rounded-lg shadow-base">
+        <div class="text-primary text-2xl mb-2"><i class="fa fa-shopping-cart"></i></div>
+        <h4 class="font-medium text-gray-800 mb-2">零售业转型加速</h4>
+        <p class="text-base text-gray-600">
+          <font size="+1">传统超市加速升级改造，2024年有63%的传统超市增加了品质商品和服务体验区域，行业整体服务水平提升<strong><font color="#3B82F6">27%</font></strong>。</font>
+        </p>
+      </div>
+      
+      <div class="bg-white p-4 rounded-lg shadow-base">
+        <div class="text-accent text-2xl mb-2"><i class="fa fa-industry"></i></div>
+        <h4 class="font-medium text-gray-800 mb-2">供应链品质提升</h4>
+        <p class="text-base text-gray-600">
+        <font size="+1"> 品质超市的崛起倒逼上游供应链升级，有机农产品种植面积5年<strong><font color="#3B82F6">增长120%</font></strong>，食品质量安全标准提高。</font>
+        </p>
+      </div>
+      
+      <div class="bg-white p-4 rounded-lg shadow-base">
+        <div class="text-chart-5 text-2xl mb-2"><i class="fa fa-users"></i></div>
+        <h4 class="font-medium text-gray-800 mb-2">民生获得感增强</h4>
+        <p class="text-base text-gray-600">
+          <font size="+1">消费者权益保护意识提升，服务投诉解决率从2018年的76%<strong><font color="#3B82F6">升至2024年的94%</font></strong>，消费满意度显著提高。</font>
+        </p>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* 板块样式补充 */
+.quality-retail-analysis {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* 进度条样式 */
+.bg-primary {
+  background-color: #165DFF;
+}
+
+.bg-accent {
+  background-color: #722ED1;
+}
+
+.bg-chart-5 {
+  background-color: #0FC6C2;
+}
+
+/* 卡片悬停效果 */
+.transform {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.transform:hover {
+  transform: translateY(-3px);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .grid-cols-3, .grid-cols-2 {
+    grid-template-columns: 1fr;
+  }
+  
+  h2.text-2xl, h2.text-3xl {
+    font-size: 1.5rem;
+  }
+  
+  h3.text-xl {
+    font-size: 1.25rem;
+  }
+}
+</style>
+    
+    <script>
+        // 导航栏滚动效果
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // 更新导航栏活跃状态
+                document.querySelectorAll('.nav-links a').forEach(link => {
+                    link.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
+        });
+	</script>
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+            <br />
+			<br />
+            <br />
+			<br />
+   <div class="final-quote-container">
+    <p class="final-quote" align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;于东来曾表示："我做零售行业的超市，就想着怎样把这个民生的问题给解决好，然后我有合理的回报，合理的利润，形成这样良性的循环”<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当一家超市能记住老顾客的喜好，能为晚归的上班族留一盏灯，能让老年人感受到被尊重——它贩卖的就不再只是商品，而是一种有温度的生活方式。这种转变，正是中国民生进步最生动的注脚。
+    </p>
+</div>
+
+<!-- 修正脚本位置和逻辑 -->
+<script>
+// 移除重复脚本，保留一个滚动监听
+document.addEventListener('DOMContentLoaded', function() {
+    const quoteElement = document.querySelector('.final-quote');
+    if (!quoteElement) return;
+
+    // 初始状态强制隐藏（确保动画能触发）
+    quoteElement.style.opacity = '0';
+    quoteElement.style.transform = 'translateY(20px)';
+
+    function checkVisibility() {
+        const rect = quoteElement.getBoundingClientRect();
+        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+        
+        // 当元素顶部进入视口80%时触发动画
+        if (rect.top <= windowHeight * 0.8 && rect.bottom >= 0) {
+            quoteElement.classList.add('visible');
+            window.removeEventListener('scroll', checkVisibility); // 只执行一次
+        }
+    }
+
+    // 监听滚动和初始检查
+    window.addEventListener('scroll', checkVisibility);
+    checkVisibility(); // 页面加载时检查一次
+});
+</script>
+
+<style>
+/* 修正样式冲突，确保动画生效 */
+.final-quote-container {
+    padding: 40px 20px;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.final-quote {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    line-height: 1.8;
+    font-family: "方正宋刻本秀楷简体", serif;
+    opacity: 0; /* 初始透明 */
+    transform: translateY(20px); /* 初始下移 */
+    transition: opacity 2s ease-out, transform 1.5s ease-out; /* 关键动画定义 */
+    padding: 30px 40px;
+    border-radius: 16px;
+    color: #333;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(240, 248, 255, 0.95));
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    /* 移除可能阻止动画的属性 */
+    will-change: opacity, transform; /* 提示浏览器优化动画 */
+}
+
+/* 确保激活状态样式优先级 */
+.final-quote.visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+</style>
+</body>
+</html>

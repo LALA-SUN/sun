@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>消费升级下的民生变迁</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#10B981',
+                        accent: '#F59E0B',
+                        dark: '#1F2937'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        serif: ['Georgia', 'Cambria', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            }
+            .text-shadow-lg {
+                text-shadow: 0 4px 8px rgba(0,0,0,0.5);
+            }
+            .bg-blur {
+                backdrop-filter: blur(8px);
+            }
+            .animate-float {
+                animation: float 6s ease-in-out infinite;
+            }
+            .animate-fade-in {
+                animation: fadeIn 1.5s ease-out forwards;
+            }
+            .animate-slide-up {
+                animation: slideUp 1.2s ease-out forwards;
+            }
+            .btn-pulse {
+                animation: pulse 2s infinite;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+            from { 
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(59, 130, 246, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
+        }
+
+        /* 统一边距 - 使用Tailwind的响应式类替代媒体查询 */
+    </style>
+	
+</head>
+
+<body class="min-h-screen bg-cover bg-fixed bg-center flex items-center justify-center" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.3)), url(pic/market1.png);">
+    <div class="fixed inset-0 bg-black/30 bg-blur"></div>
+    
+    <!-- 使用Tailwind的响应式内边距替代自定义媒体查询 -->
+    <div id="part1" class="container mx-auto py-16 px-4 sm:px-6 lg:px-8 relative z-10 max-w-7xl">
+        <!-- 标题区域：两行使用完全相同的样式类 -->
+        <div class="text-center mb-12 opacity-0 animate-fade-in" style="animation-delay: 0.3s;">
+            <h1 class="title-line text-[clamp(1.5rem,10vw,4rem)] font-bold text-white leading-tight text-shadow-lg mb-4 transition-all duration-700">
+                从山姆、胖东来等品质类超市的崛起中</h1>
+            <h1 class="title-line text-[clamp(1.5rem,10vw,4rem)] font-bold text-white leading-tight text-shadow-lg mb-6">
+                解码消费升级下的民生变迁</h1>
+            <p class="xiaozi text-[clamp(1rem,2vw,1.4rem)] text-gray-100 text-shadow max-w-4xl mx-auto mt-8 opacity-0 animate-slide-up" style="animation-delay: 0.8s;">
+                从2020年到2025年，消费市场正在悄然发生变化，透过现象级零售商的数据，我们得以窥见普通人消费习惯的深层变迁。
+            </p>
+        </div>
+        
+        <div class="flex justify-center mt-12 opacity-0 animate-slide-up" style="animation-delay: 1.3s;">
+            <!-- 确保链接在移动设备上有足够的点击区域 -->
+            <a href="about.html" target="_self" class="group relative block">
+                <div class="anniu1 bg-primary hover:bg-primary/90 text-white font-bold py-3 sm:py-4 px-6 sm:px-10 rounded-full text-[clamp(1rem,2vw,1.4rem)] transition-all duration-400 transform hover:scale-105 hover:shadow-xl btn-pulse flex items-center gap-2 min-h-[48px] min-w-[48px] sm:min-w-auto">
+                    <span>了解更多</span>
+                    <i class="fa fa-arrow-right group-hover:translate-x-2 transition-transform duration-300"></i>
+                </div>
+            </a>
+        </div>
+        
+        <div class="absolute -top-10 -left-10 w-20 h-20 bg-accent/30 rounded-full blur-xl animate-float hidden md:block"></div>
+        <div class="absolute -bottom-5 -right-5 w-24 h-24 bg-secondary/30 rounded-full blur-xl animate-float hidden md:block" style="animation-delay: 2s;"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 同时选中两行标题，统一处理滚动样式
+            const titles = document.querySelectorAll('h1.title-line');
+            
+            window.addEventListener('scroll', () => {
+                const scrollPos = window.scrollY;
+                const isMobile = window.innerWidth < 768;
+                const threshold = isMobile ? 30 : 50;
+                
+                titles.forEach(title => {
+                    if (scrollPos > threshold) {
+                        // 滚动时两行同时应用相同的缩小样式
+                        title.classList.add('text-[clamp(1rem,4vw,2rem)]');
+                        title.classList.remove('text-[clamp(1.5rem,10vw,4rem)]');
+                    } else {
+                        // 初始状态两行同时应用相同的默认样式
+                        title.classList.add('text-[clamp(1.5rem,10vw,4rem)]');
+                        title.classList.remove('text-[clamp(1rem,4vw,2rem)]');
+                    }
+                });
+            });
+
+            window.dispatchEvent(new Event('scroll'));
+
+            // 为移动设备添加触摸反馈
+            const link = document.querySelector('a[href="about.html"]');
+            if (link) {
+                link.addEventListener('touchstart', () => {
+                    link.querySelector('.anniu1').classList.add('scale-95');
+                });
+                link.addEventListener('touchend', () => {
+                    link.querySelector('.anniu1').classList.remove('scale-95');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
